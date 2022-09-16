@@ -1,0 +1,87 @@
+body{
+  margin: 0 150px 50px 150px;
+  background-image: url("../img/workspace-g1ca8ebed4_1920.jpg");
+  font-family:arial, sans-serif;
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+}
+
+.container {
+  margin: 0;
+}
+form:not(.table) {
+  margin-left: auto;
+  margin-right: auto;
+  background-color:rgba(0, 0, 0, 0.8);
+  padding: 50px;
+  border-radius: 10px;
+  max-width: 500px;
+  align-items: center;
+}
+table{
+  margin-bottom: 50px;
+  min-width: 100%;
+}
+
+table.listing {
+    border-spacing: 0px;
+    width: 80%;
+    border: 1px solid grey;
+}
+
+table.listing th, table.listing td {
+    border: 1px solid grey;
+    height: 30px;
+    padding: 5px;
+    background-color: white;
+}
+
+input:not(input.bouton-table), textarea {
+  padding: 6px;
+  display:block;
+  margin: 5px;
+  width: 400px;
+  align-items: center;
+}
+.bouton-table{
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  background-color: white;
+  display: inline-flex;
+}
+label{
+  color: white;
+}
+ul{
+  padding-inline-start: 0;
+}
+.navigation {
+
+  display: flex;
+  justify-content:space-around;
+  list-style: none;
+  margin-bottom: 50px;
+}
+
+.navigation a {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+ 
+.navigation a:hover {
+  background-color:rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 5px;
+  transition-duration: 200ms;
+  text-decoration: none;
+}
