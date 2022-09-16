@@ -1,7 +1,8 @@
 <?php
 function forum_model_list(){
     require(CONNEX_DIR);
-    $sql = "SELECT * FROM forum INNER JOIN user ON idUserForum=idUser";
+    // Ordonner selon les dates de publication
+    $sql = "SELECT * FROM forum INNER JOIN user ON idUserForum=idUser ORDER BY dateForum ASC";
     $result = mysqli_query($con, $sql);
     $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
     mysqli_close($con);
@@ -28,6 +29,7 @@ function forum_model_view($request){
         $$key=mysqli_real_escape_string($con,$value);
     }
     // établir une variable globale
+    // print_r($request); die();
     $_SESSION['idForumModelView'] = $id;
     $sql = "SELECT * FROM forum WHERE idForum = $id";
     $result = mysqli_query($con, $sql);
@@ -41,7 +43,8 @@ function forum_model_edit($request){
     foreach($request as $key=>$value){
         $$key=mysqli_real_escape_string($con,$value);
     }
-    $sql = "UPDATE forum SET titleForum = '$titleForum', articleForum = '$articleForum', dateForum = '$dateForum' WHERE idForum = ".$_SESSION['idForumModelView'];
+    // print_r($request); die();
+    $sql = "UPDATE forum SET titleForum = '$titleForum', articleForum = '$articleForum', dateForum = '$dateForum' WHERE idForum = $idForum";
     mysqli_query($con, $sql);
     mysqli_close($con);
 }

@@ -17,7 +17,7 @@
         </label>
         <input type="submit">
         <div class="container">
-            <span><a href="index.php?module=user&action=login">Déjà un Compte?</a></span>
+            <span><a href="index.php?module=user&action=login" class="login">Déjà un Compte?</a></span>
         </div>
 </form>
 

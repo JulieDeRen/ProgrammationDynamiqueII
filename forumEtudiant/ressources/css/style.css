@@ -6,7 +6,10 @@ body{
   background-position: fixed;
   background-repeat: no-repeat;
 }
-
+h1{
+  text-align:left;
+  margin-bottom: 30px;
+}
 .container {
   margin: 0;
 }
@@ -43,6 +46,21 @@ input:not(input.bouton-table), textarea {
   margin: 5px;
   width: 400px;
   align-items: center;
+  background-color: white;
+  border: none;
+}
+form input[type=submit]:not(input.bouton-table){
+  margin-top: 20px;
+  height: 30px;
+  cursor: pointer;
+  width: 410px;
+  font-size: 17px;
+  font-weight: bold;
+  background-color: white;
+  border: none;
+}
+form input[type=submit]:not(input.bouton-table):hover{
+  background-color: pink;
 }
 .bouton-table{
   border: none;
@@ -51,7 +69,13 @@ input:not(input.bouton-table), textarea {
   background-color: white;
   display: inline-flex;
 }
+.login{
+  color: white;
+  margin-left: 5px;
+}
+
 label{
+  margin-left: 5px;
   color: white;
 }
 ul{
@@ -60,7 +84,7 @@ ul{
 .navigation {
 
   display: flex;
-  justify-content:space-around;
+  justify-content:space-between;
   list-style: none;
   margin-bottom: 50px;
 }

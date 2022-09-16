@@ -9,6 +9,6 @@
     <input type = "submit" value = "login">
   </div>
   <div class="container">
-    <span><a href="index.php?module=user&action=create">Créer un Compte?</a></span>
+    <span><a href="index.php?module=user&action=create" class="login">Créer un Compte?</a></span>
   </div>
 </form>
